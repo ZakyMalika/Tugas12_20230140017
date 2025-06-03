@@ -4,40 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Js.DOM</title>
+    <style>
+        input {
+            border: 1px solid black;
+            padding: 5px;
+            margin: 5px;
+        }
+        textarea {
+            border: 1px solid black;
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            border: none;
+            cursor: pointer;
+        }
+        .jurusan {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
-<body>
-    <div>
-        <div>
-            <h2>Formulir</h2>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="containner mx-auto my-10 p-5 bg-white shadow-lg rounded-lg w-1/2">
+        <div class="text-center">
+            <h2 class="text-center bg-blue-100">Formulir Peminatan Prodi <br>Teknologi Informasi UMY</h2>
         </div>
 
         <form action="">
+            <label for="name">Nama:</label><br>
+            <input placeholder="Nama" type="text" id="nama" name="nama" required><br>
+            <label for="nim">NIM:</label><br>
+            <input placeholder="Nim" type="text" id="nim" name="nim" required><br>
+            <p>Minat Dimana?</p>
+            <input type="radio" name="peminatan" id="programming" value="programming">
+            <label for="programming">programming</label><br>
+            <input type="radio" name="peminatan" id="networking" value="networking">
+            <label for="networking">networking</label><br>
+            <input type="radio" name="peminatan" id="data" value="data">
+            <label for="data">data</label><br>
+            <input type="radio" name="peminatan" id="ui/ux" value="ui/ux">
+            <label for="ui/ux">ui/ux</label><br>
 
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="alamat">Alamat :</label>
+            <br>
+            <textarea name="alamat" id="alamat" placeholder="Tulis Alamat" cols="30" rows="5"></textarea><br>
+<label for="angkatan">Angkatan Berapo kau ?</label><br>
+            <select class="jurusan" id="jurusan"> <br>
+                <option value="2022">2022</option> <br>
+                <option value="2023">2023</option> <br>
+                <option value="2024">2024</option><br>
+            </select>
+            <br>
+            <label for="angkatan">Tanggal</label><br>
+            <input type="date" id="tanggalLahir"><br><br>
 
-            <label for="nim">NIM:</label>
-            <input type="text" id="nim" name="nim" required>
-
-            <p>adbsjbdak</p>
-
-            <input type="radio">
-            <label for="">1</label>
-            <input type="radio">
-            <label for="">2</label>
-            <input type="radio">
-            <label for="">3</label>
-            <input type="radio">
-            <label for="">4</label>
-
-            <label for=""></label>
-            <textarea name="" id=""></textarea>
-
-
-
-            <button type="submit" onclick="kirimData()">Kirim</button>
+            <button class="color-white bg-blue-100 p-2" type="submit" onclick="kirimData()">Kirim Yo</button>
         </form>
     </div>
 
